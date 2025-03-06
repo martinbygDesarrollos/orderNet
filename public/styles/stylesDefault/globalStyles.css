@@ -1,0 +1,332 @@
+html,
+body {
+    height: 100%;
+}
+.page-contentClass{
+    flex: 1 0 auto;
+}
+
+#sticky-footer {
+    flex-shrink: none;
+}
+
+.border-template{
+    border: 2px solid var(--color-borde) !important;
+    border-radius: 5px;
+}
+
+.background-template-color{
+    background-color: var(--amarillo-brillante) !important;
+}
+
+.background-template-color2{
+    background-color: var(--color-fondo-secundario) !important;
+}
+
+.background-template-text{
+    background-color: var(--color-texto-principal) !important;
+}
+
+.text-template-background{
+    color: var(--color-fondo-secundario) !important;
+}
+
+.text-template-color{
+    color:  var(--color-texto-principal) !important;
+}
+
+.btn-primary {
+    background-color: var(--amarillo-brillante) !important;
+    border-color: var(--amarillo-brillante) !important;
+    color: var(--negro-puro) !important;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: var(--amarillo-dorado) !important;
+    border-color: var(--amarillo-dorado) !important;
+}
+
+.btn-primary:focus {
+    border-color: var(--gris-medio) !important;
+    box-shadow: 0 0 5px var(--gris-medio) !important;
+}
+
+.btn-cancel {
+    background-color: var(--amarillo-ambar) !important;
+    border-color: var(--amarillo-ambar) !important;
+    color: var(--negro-puro) !important;
+}
+
+.btn-cancel:hover, .btn-cancel:active {
+    background-color: var(--amarillo-ambar2) !important;
+    border-color: var(--amarillo-ambar2) !important;
+}
+
+.btn-cancel:focus {
+    border-color: var(--gris-medio) !important;
+    box-shadow: 0 0 5px var(--gris-medio) !important;
+}
+
+:root {
+    /* Colores principales */
+    --negro-puro: #000000;
+    --amarillo-brillante: #FFDE03;
+    --amarillo-dorado: rgb(255, 230, 0);
+    --gris-oscuro: #1A1A1A;
+    --amarillo-palido: #FFF9C4;
+    --gris-medio: #333333;
+    --amarillo-ambar: #ffaa00;
+    --amarillo-ambar2: #ffb700;
+    --blanco: #FFFFFF;
+    --cart-items: "0";
+    
+    /* Variables para uso específico */
+    --color-texto-principal: var(--negro-puro);
+    --color-fondo-principal: var(--blanco);
+    --color-acento-primario: var(--amarillo-brillante);
+    --color-acento-secundario: var(--amarillo-ambar);
+    --color-fondo-secundario: var(--gris-oscuro);
+    --color-texto-invertido: var(--blanco);
+    --color-fondo-suave: var(--amarillo-palido);
+    --color-borde: var(--gris-medio);
+}
+#tableUsers tr td, #tableUsers tr th, #tableSubSections tr td, #tableSubSections tr th, #tableSections tr td, #tableSections tr th, #tableProviders tr td, #tableProviders tr th, #tableItems tr td, #tableItems tr th{
+    text-align: center !important;
+}
+
+#tableItemsUser tr th{
+    text-align: center !important;
+}
+
+#tableItemsUser tr td:nth-child(2){
+    text-align: center !important;
+}
+#tableItemsUser tr td:nth-child(3){
+    justify-content: center
+}
+
+.dropdown-toggle::after{
+    content: none;
+}
+.nav-item.dropdown{
+    width: 40px;
+    height: 40px;
+}
+
+.bounceAnimation {
+    animation: bounceFast 0.1s normal;
+}
+
+#titlePage{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 100px - 150px);
+    text-align: center;
+    text-wrap-mode: nowrap;
+}
+
+#cart {
+    position: relative;
+    content: none;
+}
+#cart.playAnimation {
+    animation: bounce 0.2s normal;
+}
+
+#cart.withItems::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: var(--cart-items, "2");
+    background-color: red;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 1rem;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+        /* transform: translateY(0); */
+    }
+    50% {
+        transform: scale(2);
+        /* transform: translateY(-10px); */
+    }
+}
+
+@keyframes bounceFast {
+    0%, 100% {
+        transform: scale(1);
+        /* transform: translateY(0); */
+    }
+    50% {
+        transform: scale(1.4);
+        /* transform: translateY(-10px); */
+    }
+}
+
+.navbar {
+    justify-content: space-between;
+}
+.dropdown-item{
+    padding: .5rem 1.5rem;
+    color: #FFFFFF;
+    background-color: #000000;
+}
+.dropdown-menu.show{
+    display: block;
+    position: absolute;
+    left: -152px;
+    width: 200px !important;
+    background-color: #000000;
+}
+/* .dropdown-menu.show a{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 5rem;
+    right: 0;
+    position: absolute;
+} */
+
+.tableContainer{
+    max-height: 90vh !important;
+    /* max-height: 200px; */
+    overflow: auto !important;
+    scroll-margin-top: 10px !important;    
+}
+.tableContainer thead {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1 !important;
+}
+/* .tableContainer table {
+    margin-top: auto;
+} */
+
+#providersList, #newArticleProvidersList {
+    max-height: 30vh !important;
+    overflow-y: auto;
+}
+.form-check-input {
+    position: relative !important;
+}
+/* #providersTable tbody tr td:nth-child(1){ */
+    /* background-color: #ff0000; */
+    /* display: flex; */
+/* } */
+
+.navbar .nav-item.d-flex:hover{
+    background-color: var(--amarillo-dorado) !important;
+    border-color: var(--amarillo-dorado) !important;
+}
+
+.template-bg {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+.template-text {
+    color: #FFFFFF !important;
+}
+
+.template-btn {
+    background-color: var(--amarillo-brillante) !important;
+    border-color: var(--amarillo-brillante) !important;
+    color: var(--negro-puro) !important;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 1px #000000 !important;
+}
+
+.template-btn:hover, .template-btn:active {
+    background-color: var(--amarillo-dorado) !important;
+    border-color: var(--amarillo-dorado) !important;
+    border-radius: 2rem;
+}
+
+.template-btn:focus {
+    border-color: var(--gris-medio) !important;
+    box-shadow: 0 0 5px var(--gris-medio) !important;
+    border-radius: 2rem;
+}
+
+#tableUserSubSections tbody>tr td div input.form-check-input:after {
+    content: "Pendiente";
+    position: absolute;
+    left: 25px;
+    top: -.45rem;
+    color: red;
+    font-size: 18px;
+}
+#tableUserSubSections tbody>tr td div input.form-check-input:checked:after {
+    content: "Hecho";
+    color: green;
+}
+
+#tableUserSubSections tbody>tr td div.form-check {
+    position: relative;
+    display: inline-block;
+}
+
+#navbarNav ul{
+    flex-direction: row !important;
+}
+
+#navbarNav ul li a{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inventario{
+    display: flex;
+    justify-content: space-between;
+}
+.inventario a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.inventario i {
+    display: flex;
+    align-items: center;
+}
+
+/* Position the checkbox container to allow for the text */
+/* .form-check {
+    position: relative;
+    display: inline-block;
+} */
+
+/* Add the "Pendiente" text for unchecked boxes */
+/* .form-check-input:after {
+    content: "Pendiente";
+    position: absolute;
+    left: 25px;
+    top: -.45rem;
+    color: red;
+    font-size: 18px;
+} */
+
+/* Change to "Hecho" text when checked */
+/* .form-check-input:checked:after {
+    content: "Hecho";
+    color: green;
+} */
+
+/* Agregar texto con ::before solo en pantallas <= 600px */
+/* @media (max-width: 992px) { */
+    /* .signout::before {
+      content: "Cerrar Sesion ";
+      color: black; 
+      font-weight: bold;
+    }
+    .signin::before {
+      content: "Iniciar Sesion ";
+      color: black; 
+      font-weight: bold;
+    } */
+  /* } */

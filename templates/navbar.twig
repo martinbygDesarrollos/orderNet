@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg template-bg" style="padding-right: 8px; padding-left: 8px;">
+    <a class="navbar-brand template-text font-weight-bold mr-0" href="{{path_for('Home')}}">TorniPay</a>
+    {# <button class="navbar-toggler template-btn p-2" style="width:39px;" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-chevron-down"></i>
+    </button> #}
+    <h5 class="m-0" id="titlePage">
+        POSICIONES
+    </h5>
+    <div class="" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+            {% if systemSession and systemSession.permisos == "administrador" %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle template-btn" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-align: center;">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{{path_for('Home')}}">Inicio</a>
+                        <a class="dropdown-item" href="{{path_for('Users')}}">Usuarios</a>
+                        <a class="dropdown-item" href="{{path_for('Sections')}}">Inventarios</a>
+                        <a class="dropdown-item" href="{{path_for('SubSections')}}">Secciones</a>
+                        <a class="dropdown-item" href="{{path_for('Articles')}}">Artículos</a>
+                        <a class="dropdown-item" href="{{path_for('Providers')}}">Proveedores</a>
+                        <a class="dropdown-item" href="{{path_for('SignOut')}}">Cerrar sesión</a>
+                    </div>
+                </li>
+                {# <li class="nav-item d-flex align-self-center w-100 mt-1">
+                    <a class="nav-link template-btn ml-2 mr-2 mb-1 mt-1 w-100 text-center" href="{{path_for('Home')}}">Inicio</a>
+                </li>
+                <li class="nav-item d-flex align-self-center w-100">
+                    <a class="nav-link template-btn ml-2 mr-2 mb-1 mt-1 w-100 text-center" href="{{path_for('Users')}}">Usuarios</a>
+                </li>
+                <li class="nav-item d-flex align-self-center w-100">
+                    <a class="nav-link template-btn ml-2 mr-2 mb-1 mt-1 w-100 text-center" href="{{path_for('Sections')}}">Inventarios</a>
+                </li>
+                <li class="nav-item d-flex align-self-center w-100">
+                    <a class="nav-link template-btn ml-2 mr-2 mb-1 mt-1 w-100 text-center" href="{{path_for('SubSections')}}">Secciones</a>
+                </li>
+                <li class="nav-item d-flex align-self-center w-100">
+                    <a class="nav-link template-btn ml-2 mr-2 mb-1 mt-1 w-100 text-center" href="{{path_for('Articles')}}">Articulos</a>
+                </li>
+                <li class="nav-item d-flex align-self-center w-100">
+                    <a class="nav-link template-btn ml-2 mr-2 mb-1 mt-1 w-100 text-center" href="{{path_for('Providers')}}">Proveedores</a>
+                </li>
+                <li class="nav-item fin">
+                    <a href="{{path_for('SignOut')}}" class="btn template-btn signout template-text shadow-sm m-2" style=" height:40px;" data-toggle="tooltip" data-placement="top" title="Cerrar sesión"><i class="fas fa-sign-out-alt"></i></a>
+                </li> #}
+            {% elseif systemSession and systemSession.permisos == "normal"%}
+                <li class="nav-item fin " id="cart">
+                    <a href="{{path_for('Cart')}}" class="btn template-btn signout template-text shadow-sm m-2" style=" height:40px;" data-toggle="tooltip" data-placement="top" title="Cerrar sesión"><i class="fas fa-shopping-cart"></i></a>
+                </li>
+                <li class="nav-item fin">
+                    <a href="{{path_for('SignOut')}}" class="btn template-btn signout template-text shadow-sm m-2" style=" height:40px;" data-toggle="tooltip" data-placement="top" title="Cerrar sesión"><i class="fas fa-sign-out-alt"></i></a>
+                </li>
+            {% else %}
+                <li class="nav-item fin">
+                    <a href="{{path_for('SignIn')}}" class="btn template-btn signin template-text shadow-sm m-2" style="height:40px;" data-toggle="tooltip" data-placement="top" title="Iniciar sesión"><i class="fas fa-sign-in-alt"></i></a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>

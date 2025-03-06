@@ -1,0 +1,295 @@
+[04-Mar-2025 08:17:18 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 404
+[04-Mar-2025 08:17:21 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:17:23 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:17:23 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 214
+[04-Mar-2025 08:17:23 America/Montevideo] PHP Notice:  Undefined variable: userClass in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 237
+[04-Mar-2025 08:19:20 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:23 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:23 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 214
+[04-Mar-2025 08:19:23 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 240
+[04-Mar-2025 08:19:32 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:34 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:34 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 214
+[04-Mar-2025 08:19:34 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 240
+[04-Mar-2025 08:19:34 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:37 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 404
+[04-Mar-2025 08:19:39 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:40 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:40 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 214
+[04-Mar-2025 08:19:40 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 240
+[04-Mar-2025 08:19:40 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:41 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:41 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 214
+[04-Mar-2025 08:19:41 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 240
+[04-Mar-2025 08:19:41 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:43 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:43 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 214
+[04-Mar-2025 08:19:43 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 240
+[04-Mar-2025 08:19:43 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:44 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:44 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 214
+[04-Mar-2025 08:19:44 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 240
+[04-Mar-2025 08:19:44 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:45 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:45 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 214
+[04-Mar-2025 08:19:45 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 240
+[04-Mar-2025 08:19:45 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:48 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 404
+[04-Mar-2025 08:19:51 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:54 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:54 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 214
+[04-Mar-2025 08:19:54 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 240
+[04-Mar-2025 08:19:54 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:59 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:19:59 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 214
+[04-Mar-2025 08:19:59 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 240
+[04-Mar-2025 08:19:59 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:21:59 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:22:01 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:22:01 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 216
+[04-Mar-2025 08:22:01 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 242
+[04-Mar-2025 08:22:53 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:22:56 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:22:56 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 217
+[04-Mar-2025 08:22:56 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 243
+[04-Mar-2025 08:24:31 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:24:33 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:24:33 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 217
+[04-Mar-2025 08:24:33 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 246
+[04-Mar-2025 08:25:11 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:25:19 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:25:19 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 217
+[04-Mar-2025 08:25:19 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 246
+[04-Mar-2025 08:27:43 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:27:45 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:27:45 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 217
+[04-Mar-2025 08:27:45 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 218
+[04-Mar-2025 08:27:45 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 217
+[04-Mar-2025 08:27:45 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 218
+[04-Mar-2025 08:27:45 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 217
+[04-Mar-2025 08:27:45 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 218
+[04-Mar-2025 08:27:45 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 217
+[04-Mar-2025 08:27:45 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 218
+[04-Mar-2025 08:27:45 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 247
+[04-Mar-2025 08:28:24 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:28:26 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:28:26 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 217
+[04-Mar-2025 08:28:26 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 218
+[04-Mar-2025 08:28:26 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 217
+[04-Mar-2025 08:28:26 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 218
+[04-Mar-2025 08:28:26 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 217
+[04-Mar-2025 08:28:26 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 218
+[04-Mar-2025 08:28:26 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 217
+[04-Mar-2025 08:28:26 America/Montevideo] PHP Notice:  Trying to get property 'estado' of non-object in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 218
+[04-Mar-2025 08:28:26 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 247
+[04-Mar-2025 08:29:14 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:29:16 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:29:16 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 247
+[04-Mar-2025 08:30:01 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:30:04 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:30:04 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 247
+[04-Mar-2025 08:30:05 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:30:07 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 404
+[04-Mar-2025 08:30:13 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:30:15 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 404
+[04-Mar-2025 08:30:17 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:30:20 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:30:20 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 247
+[04-Mar-2025 08:30:20 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:30:51 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:30:52 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:30:52 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 247
+[04-Mar-2025 08:34:02 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:34:04 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:34:04 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 247
+[04-Mar-2025 08:34:05 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:34:07 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 404
+[04-Mar-2025 08:34:09 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:34:10 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:34:10 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 247
+[04-Mar-2025 08:35:40 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:36:02 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:36:02 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 247
+[04-Mar-2025 08:36:04 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:36:06 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 404
+[04-Mar-2025 08:36:08 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:36:22 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 315
+[04-Mar-2025 08:36:22 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 247
+[04-Mar-2025 08:38:25 America/Montevideo] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object in C:\xampp\htdocs\orderNet\src\connection\open_connection.php on line 59
+[04-Mar-2025 08:39:03 America/Montevideo] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, first array member is not a valid class name or object in C:\xampp\htdocs\orderNet\src\connection\open_connection.php on line 59
+[04-Mar-2025 08:51:15 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:51:18 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:51:18 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 329
+[04-Mar-2025 08:51:42 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:51:44 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 417
+[04-Mar-2025 08:51:46 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:51:47 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:51:47 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 329
+[04-Mar-2025 08:51:47 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 250
+[04-Mar-2025 08:51:58 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:52:00 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 417
+[04-Mar-2025 08:52:02 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:52:19 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:52:21 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 417
+[04-Mar-2025 08:52:22 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:52:24 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:52:24 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 329
+[04-Mar-2025 08:52:24 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 242
+[04-Mar-2025 08:52:24 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:52:25 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 417
+[04-Mar-2025 08:52:27 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:52:28 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:52:28 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 329
+[04-Mar-2025 08:52:28 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:52:29 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:52:29 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 329
+[04-Mar-2025 08:52:29 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:52:31 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 417
+[04-Mar-2025 08:52:32 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:52:33 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:52:33 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 329
+[04-Mar-2025 08:52:33 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 242
+[04-Mar-2025 08:52:33 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 08:52:35 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 417
+[04-Mar-2025 08:52:55 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:03:55 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 417
+[04-Mar-2025 09:03:57 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:03:58 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:03:58 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 329
+[04-Mar-2025 09:03:58 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:03:59 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:03:59 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 329
+[04-Mar-2025 09:03:59 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:03:59 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:03:59 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 329
+[04-Mar-2025 09:04:00 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:04:00 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:04:00 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 329
+[04-Mar-2025 09:04:00 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 242
+[04-Mar-2025 09:04:00 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:04:01 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 417
+[04-Mar-2025 09:04:03 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:04:06 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:04:06 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 329
+[04-Mar-2025 09:04:06 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 242
+[04-Mar-2025 09:04:06 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:04:06 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:04:06 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 329
+[04-Mar-2025 09:04:07 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:04:08 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 417
+[04-Mar-2025 09:04:09 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:04:11 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:04:11 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 329
+[04-Mar-2025 09:04:11 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\controllers\ctr_users.php on line 242
+[04-Mar-2025 09:04:11 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:04:11 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:04:11 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 329
+[04-Mar-2025 09:04:12 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:04:13 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 417
+[04-Mar-2025 09:04:27 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:04:38 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 417
+[04-Mar-2025 09:04:44 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:15:13 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:15:18 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:15:22 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:15:27 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:16:13 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:16:16 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:36:15 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:36:17 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:36:17 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 329
+[04-Mar-2025 09:36:17 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:36:18 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:36:18 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:36:31 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:36:32 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:36:32 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:36:34 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:36:35 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:36:35 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:36:56 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 417
+[04-Mar-2025 09:36:58 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:37:02 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:37:02 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:42:42 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:42:42 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:42:43 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:42:43 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:43:53 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:43:53 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:44:17 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:44:17 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:44:30 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:44:30 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:45:22 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:45:22 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:46:14 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:46:14 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:47:21 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:47:21 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:47:39 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:47:39 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:48:38 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:48:40 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:48:40 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:48:42 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:48:43 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:48:43 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:50:05 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:50:05 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:51:35 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:51:35 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:51:42 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:51:42 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:51:55 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:51:55 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:52:14 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:52:14 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:52:37 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:52:37 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:52:52 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:52:52 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:53:08 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:53:08 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:53:17 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:53:17 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:53:26 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:53:26 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:53:58 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:53:58 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:54:18 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:54:18 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:57:34 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:57:34 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 09:59:07 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 417
+[04-Mar-2025 09:59:09 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:59:10 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 09:59:10 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 10:00:14 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 10:00:14 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 10:00:27 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 10:00:27 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 10:00:41 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 10:00:41 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 10:16:02 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 10:16:02 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 10:17:14 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 10:17:14 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 10:17:28 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 10:17:28 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 10:17:52 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 10:17:52 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 10:18:38 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 10:18:38 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 10:20:15 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 10:20:15 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 10:20:23 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 10:20:23 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 10:24:42 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 10:24:42 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 10:25:08 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 10:25:08 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 10:25:22 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 10:25:22 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350
+[04-Mar-2025 10:25:31 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 314
+[04-Mar-2025 10:25:31 America/Montevideo] PHP Warning:  Creating default object from empty value in C:\xampp\htdocs\orderNet\src\class\defaultclass\users.php on line 350

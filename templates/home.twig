@@ -1,0 +1,28 @@
+{% extends "base.twig" %}
+{% block head %}
+{% endblock %}
+{% block content %}
+    <div class="d-flex flex-column content vertical-align-center justify-content-center h-100" style="gap: 5rem;">
+        <div class="d-flex content vertical-align-center justify-content-center">
+            <img src="{{path_for('Start')}}/img/torniPay_logo.png" width="400">
+        </div>
+        <div class="d-flex flex-column content vertical-align-center justify-content-center w-100 align-items-center">
+            <a href="{{path_for('Users')}}" id="buttonAdminUsers" class="btn template-btn shadow-sm m-2 p-auto w-50" onclick="signIn()" onkeypress="return keyPressSignIn(event, null, null)" tabindex="0">Usuarios</a>
+            <a href="{{path_for('Sections')}}" id="buttonAdminInventarios" class="btn template-btn shadow-sm m-2 p-auto w-50" onclick="signIn()" onkeypress="return keyPressSignIn(event, null, null)" tabindex="1">Inventarios</a>
+            <a href="{{path_for('SubSections')}}" id="buttonAdminSecciones" class="btn template-btn shadow-sm m-2 p-auto w-50" onclick="signIn()" onkeypress="return keyPressSignIn(event, null, null)" tabindex="2">Secciones</a>
+            <a href="{{path_for('Articles')}}" id="buttonAdminArticulos" class="btn template-btn shadow-sm m-2 p-auto w-50" onclick="signIn()" onkeypress="return keyPressSignIn(event, null, null)" tabindex="3">Articulos</a>
+            {# <a href="{{path_for('SignIn')}}" id="buttonAdminItems" class="btn template-btn shadow-sm m-2 p-auto w-50" onclick="signIn()" onkeypress="return keyPressSignIn(event, null, null)" tabindex="4">Items</a> #}
+            <a href="{{path_for('Providers')}}" id="buttonAdminProveedores" class="btn template-btn shadow-sm m-2 p-auto w-50" onclick="signIn()" onkeypress="return keyPressSignIn(event, null, null)" tabindex="5">Proveedores</a>
+        </div>
+    </div>
+{% block script %}
+<script type="text/javascript" src="{{ path_for('Start')}}scripts/utils/utils.js{{ versionerp }}"></script>
+<script type="text/javascript" src="{{ path_for('Start')}}scripts/utils/sendPost.js{{ versionerp }}"></script>
+<script type="text/javascript" src="{{ path_for('Start')}}scripts/utils/showReplyMessage.js{{ versionerp }}"></script>
+<script type="text/javascript">
+    $(document).ready( function(){
+        console.log("Ready!")
+    });
+</script>
+{% endblock %}
+{% endblock %}

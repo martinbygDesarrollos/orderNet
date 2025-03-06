@@ -1,0 +1,43 @@
+<div class="vertical-nav bg-light" id="sidebar" style="overflow: auto;">
+    <div class="py-4 px-3 mb-4 background-template-color">
+        <div class="media d-flex align-items-center ">
+            <img src="{{path_for('Start')}}img/favicon.ico" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+            <div class="media-body">
+                {# <h4 id="empresa" data-idEmpresa={{ sistemSession.idEmpresa }} class="text-template-color m-0">{{ sistemSession.empresa }}</h4> #}
+                {# <p class="font-weight-light text-template-color mb-0">{{ sistemSession.user }}</p> #}
+                {# {% if sistemSession %} #}
+                    {# {% if sistemSession.typeUser == 'readOnly' %}
+                        <p class="font-weight-light mb-0" style="color: white; "><tt style="font-size: smaller;">Sólo lectura</tt></p>
+                    {% else %}
+                        <p class="font-weight-light mb-0" style="color: white!important; "><tt style="font-size: smaller;"> Administrador </tt></p>
+                    {% endif %} #}
+                {# {% endif %} #}
+            </div>
+        </div>
+    </div>
+    <ul class="nav flex-column mb-0">
+        <li class="nav-item">
+            <a href="{{ path_for('Start') }}" class="nav-link text-dark font-italic bg-light">
+                <i class="fas fa-home text-template-background mr-4"></i></i>Inicio
+            </a>
+        </li>
+        {% if not systemSession %}
+        <li class="nav-item">
+            <a href="{{path_for('SignIn')}}" class="nav-link text-dark font-italic bg-light">
+                <i class="fas fa-sign-in-alt mr-4"></i>Iniciar sesión
+            </a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+            <a href="{{path_for('Settings')}}" class="nav-link text-dark font-italic bg-light">
+                <i class="fas fa-cog mr-4"></i>Configuraciones
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{path_for('SignOut')}}" class="nav-link text-dark font-italic bg-light">
+                <i class="fas fa-sign-out-alt mr-4"></i>Cerrar sesión
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</div>

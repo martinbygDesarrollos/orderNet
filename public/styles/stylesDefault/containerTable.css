@@ -1,0 +1,37 @@
+#containerTable {
+  overflow: auto;
+  scroll-margin-top: 10px;
+}
+
+#containerTable thead{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+}
+
+#containerTable::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+#containerTable::-webkit-scrollbar:vertical {
+  width:10px;
+}
+
+#containerTable::-webkit-scrollbar-button:increment,
+#containerTable::-webkit-scrollbar-button {
+  display: none;
+}
+
+#containerTable::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+#containerTable::-webkit-scrollbar-thumb {
+  background-color: #2c3e50;
+  border: 2px solid #ecf0f1;
+}
+
+#containerTable::-webkit-scrollbar-track {
+  margin-top: 1px;
+}

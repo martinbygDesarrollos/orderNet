@@ -1,0 +1,369 @@
+<div id="modalResponse" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div id="modalColourResponse" class="modal-header">
+                <span id="modalTitleResponse" class="modal-title"></span>
+                <button type="button" class="close" data-dismiss="modal" accesskey="x" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessageResponse" class="text-center"></p>
+            </div>
+            <div class="modal-footer">
+                <button id="modalButtonResponse" type="button" accesskey="o" class="btn background-template-color text-template-color shadow-sm"><u>O</u>k</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modalMessageOkCancel" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div id="modalOkCancelColour" class="modal-header">
+                <span id="modalOkCancelTitle" class="modal-title"></span>
+                <button type="button" class="close" data-dismiss="modal" accesskey="x" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="modalOkCancelResponse" class="text-center"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="modalOkButton" class="btn btn-success shadow-sm" data-dismiss="modal" onclick="" accesskey="o">C<u>o</u>nfirmar</button>
+                <button type="button" id="modalCancelButton" class="btn background-template-color text-template-color shadow-sm" accesskey="a">C<u>a</u>ncelar</button>
+            </div>
+            {# <div class="modal-footer">
+                <button id="modalCancelButton" type="button" accesskey="o" class="btn background-template-color text-template-color shadow-sm" data-dismiss="modal">Cancelar</button>
+                <button id="modalOkButton" type="button" accesskey="o" class="btn background-template-color text-template-color shadow-sm" onclick="createNewClient()" >Aceptar</button>
+            </div> #}
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalEditUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-userId="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header template-bg">
+				<span class="modal-title template-text">Editar Usuario</span>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-6">
+						<div class="form-group">
+							<label class="text-primary" for="inputUsuario">Usuario</label>
+							<input type="text" class="form-control" id="inputUsuario" placeholder="Ingresar usuario">
+						</div>
+					</div>
+					<div class="d-flex col-6 align-items-end">
+						<div class="form-group w-100">
+							<button class="btn template-btn" id="btnCleanPasswordUser"> Borrar contraseña <i class="fas fa-lock-open"></i> </button>
+						</div>
+					</div>
+				</div>
+				<hr>
+                <div id="modalEditUserInventarios">
+                    <table class="table table-hover table-striped" id="tableUserInventarios">
+                        <thead>
+                            <tr>
+                                <th>Inventarios <a href="{{path_for('Sections')}}" class="ml-2 btn template-btn"> <i class="fas fa-plus"></i> </a></th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<button type="button" class="btn template-btn shadow-sm" data-dismiss="modal">Cerrar</button>
+				<button id="buttonModalSaveUser" type="button" class="btn template-btn shadow-sm" >Actualizar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="modalNewSection" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-userId="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header template-bg">
+				<span class="modal-title template-text">Nuevo Inventario</span>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <label class="text-primary" for="inputSectionName">Nombre</label>
+                <input type="text" class="form-control" id="inputSectionName" placeholder="Ingresar nombre">
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<button type="button" class="btn template-btn shadow-sm" data-dismiss="modal">Cerrar</button>
+				<button id="buttonModalNewSection" class="btn template-btn shadow-sm">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalNewSubSection" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-userId="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header template-bg">
+				<span class="modal-title template-text">Nueva Sección</span>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <label class="text-primary" for="inputSectionName">Nombre</label>
+                <input type="text" class="form-control" id="inputSubSectionName" placeholder="Ingresar nombre">
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<button type="button" class="btn template-btn shadow-sm" data-dismiss="modal">Cerrar</button>
+				<button id="buttonModalNewSubSection" class="btn template-btn shadow-sm">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalNewProvider" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-userId="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header template-bg">
+				<span class="modal-title template-text">Nuevo Proveedor</span>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <label class="text-primary" for="inputProviderName">Nombre</label>
+                <input type="text" class="form-control mb-2" id="inputProviderName" placeholder="Ingresar nombre">
+                <label class="text-primary" for="inputProviderRUT">RUT</label>
+                <input type="text" class="form-control" id="inputProviderRUT" placeholder="Ingresar RUT">
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<button type="button" class="btn template-btn shadow-sm" data-dismiss="modal">Cerrar</button>
+				<button id="buttonModalNewProvider" class="btn template-btn shadow-sm">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalEditProvider" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-userId="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header template-bg">
+				<span class="modal-title template-text">Editar Proveedor</span>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <label class="text-primary" for="inputEditProviderName">Nombre</label>
+                <input type="text" class="form-control mb-2" id="inputEditProviderName" placeholder="Ingresar nombre">
+                <label class="text-primary" for="inputEditProviderRUT">RUT</label>
+                <input type="text" class="form-control" id="inputEditProviderRUT" placeholder="Ingresar RUT">
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<button type="button" class="btn template-btn shadow-sm" data-dismiss="modal">Cerrar</button>
+				<button id="buttonModalEditProvider" class="btn template-btn shadow-sm">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalNewArticle" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-userId="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header template-bg">
+				<span class="modal-title template-text">Nuevo Articulo</span>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <label class="text-primary" for="inputArticleDetalle">Detalle</label>
+                <input type="text" class="form-control mb-2" id="inputArticleDetalle" placeholder="Ingresar detalle">
+                <label class="text-primary" for="inputArticleCodigo">Codigo</label>
+                <input type="text" class="form-control" id="inputArticleCodigo" placeholder="Ingresar codigo">
+                <label class="text-primary" for="inputArticleMarca">Marca</label>
+                <input type="text" class="form-control mb-2" id="inputArticleMarca" placeholder="Ingresar marca">
+                <label class="text-primary" id="newProveedorTitle" for="inputArticleProvider">Proveedor</label>
+				<div id="newArticleProvidersList">
+					<table id="newArticleProvidersTable" class="table table-triped">
+					<thead></thead>
+					<tbody></tbody>
+					</table>
+					{# <select class="form-control" id="inputEditArticleProvider"></select> #}
+					{# <div class="row">
+						<div class="col-6" id="providersListNames">
+						</div>
+						<div class="col-6" id="providersListCodes">
+						</div>
+					</div> #}
+				</div>
+                {# <select class="form-control" id="inputArticleProvider"></select>
+				<label class="text-primary" for="inputArticleCodigoProvider">Codigo Proveedor</label> #}
+                {# <input type="text" class="form-control" id="inputArticleCodigoProvider" placeholder="Ingresar codigo"> #}
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<button type="button" class="btn template-btn shadow-sm" data-dismiss="modal">Cerrar</button>
+				<button id="buttonModalNewArticle" class="btn template-btn shadow-sm">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalEditArticle" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-userId="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header template-bg">
+				<span class="modal-title template-text">Editar Articulo</span>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <label class="text-primary" for="inputEditArticleDetalle">Detalle</label>
+                <input type="text" class="form-control mb-2" id="inputEditArticleDetalle" placeholder="Ingresar detalle">
+                <label class="text-primary" for="inputEditArticleCodigo">Codigo</label>
+                <input type="text" class="form-control" id="inputEditArticleCodigo" placeholder="Ingresar codigo">
+                <label class="text-primary" for="inputEditArticleMarca">Marca</label>
+                <input type="text" class="form-control mb-2" id="inputEditArticleMarca" placeholder="Ingresar marca">
+				<label class="text-primary" id="proveedorTitle" for="inputEditArticleProvider">Proveedor</label>
+				<div id="providersList">
+					<table id="providersTable" class="table table-triped">
+					<thead></thead>
+					<tbody></tbody>
+					</table>
+					{# <select class="form-control" id="inputEditArticleProvider"></select> #}
+					{# <div class="row">
+						<div class="col-6" id="providersListNames">
+						</div>
+						<div class="col-6" id="providersListCodes">
+						</div>
+					</div> #}
+				</div>
+				{# <label class="text-primary" for="inputEditArticleCodigoProvider">Codigo Proveedor</label>
+                <input type="text" class="form-control" id="inputEditArticleCodigoProvider" placeholder="Ingresar codigo"> #}
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<button type="button" class="btn template-btn shadow-sm" data-dismiss="modal">Cerrar</button>
+				<button id="buttonModalEditArticle" class="btn template-btn shadow-sm">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalDeleteRelUserSection" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-userId="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header template-bg">
+				<span class="modal-title template-text">Eliminar relación</span>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <p id="relationLabel">  </p>
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<button type="button" class="btn template-btn shadow-sm" data-dismiss="modal">Cancelar</button>
+				<button id="buttonModalDeleteRelation" class="btn template-btn shadow-sm">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalAddRelUserSection" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-userId="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header template-bg">
+				<span class="modal-title template-text">Asignar inventario</span>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-4 align-content-center">
+						<label class="form-label w-100 text-right m-0" id="relationSection">  </label>
+					</div>
+					<div class="col-8">
+						<select class="form-control" id="relationUsers"> <option> diego </option> <option> jose </option> </select>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<button type="button" class="btn template-btn shadow-sm" data-dismiss="modal">Cancelar</button>
+				<button id="buttonModalAddRelation" class="btn template-btn shadow-sm">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalNewItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-userId="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header template-bg">
+				<span class="modal-title template-text">Nuevo Item</span>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <label class="text-primary" for="selectItemArticle">Articulo</label>
+                <select class="form-control" id="selectItemArticle"></select>
+
+                <label class="text-primary" for="inputItemCantidad">Deberia Haber</label>
+                <input type="number" min="1" max="500" class="form-control mb-2" id="inputItemCantidad" placeholder="Ingresar cantidad">
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<button type="button" class="btn template-btn shadow-sm" data-dismiss="modal">Cerrar</button>
+				<button id="buttonModalNewItem" class="btn template-btn shadow-sm">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalDeleteRelSectionSubSection" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-userId="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header template-bg">
+				<span class="modal-title template-text">Remover Sección</span>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <p id="relationLabel2">  </p>
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<button type="button" class="btn template-btn shadow-sm" data-dismiss="modal">Cancelar</button>
+				<button id="buttonModalDeleteRelation2" class="btn template-btn shadow-sm">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalAddSubSection" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header template-bg">
+				<span class="modal-title template-text">Agregar nueva Sección</span>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <label class="text-primary" for="selectSectionSubSection">Sección</label>
+                <select class="form-control" id="selectSectionSubSection"></select>
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<button type="button" class="btn template-btn shadow-sm" data-dismiss="modal">Cerrar</button>
+				<button id="buttonModalAddSubSection" class="btn template-btn shadow-sm">Aceptar</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,45 @@
+{% extends "base.twig" %}
+{% block head %}
+{% endblock %}
+{% block content %}
+    <div class="tableContainer d-flex">
+        <table class="table table-hover table-striped" id="tableItemsUser" subseccion="{{id}}">
+            <thead class="template-bg">
+                <tr>
+                    <th> Item </th>
+                    <th> Deberia Haber </th>
+                    <th> Acción </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in items %}
+                    <tr id="{{ item['id'] }}">
+                        <td>{{ item['articulo'] }}</td>
+                        <td>{{ item['cantidad'] }}</td>
+                        <td style="display: flex; flex-direction: row;"><button id="" class="btnRemoveFromCart ml-2 btn template-btn"> <i class="fas fa-minus"></i> </button> <button id="" class="btnAddToCart ml-2 btn template-btn"> <i class="fas fa-plus"></i> </button></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% block script %}
+<script type="text/javascript" src="{{ path_for('Start') }}scripts/user/items-user.js{{ versionerp }}"></script>
+<script type="text/javascript" src="{{ path_for('Start') }}scripts/utils/showReplyMessage.js{{ versionerp }}"></script>
+<script type="text/javascript" src="{{ path_for('Start') }}scripts/utils/sendPost.js{{ versionerp }}"></script>
+<script type="text/javascript" src="{{ path_for('Start') }}scripts/utils/utils.js{{ versionerp }}"></script>
+<script type="text/javascript">
+    $(document).ready( function(){
+        console.log("Ready!")
+        const itemsCount = {{carrito_count}} > 0 ? {{carrito_count}} : 0;
+
+        document.documentElement.style.setProperty('--cart-items', `"${itemsCount}"`);
+        
+        if(itemsCount > 0){
+            $('#cart').addClass('withItems')
+        }
+
+        $('#titlePage').text('{{systemSession.usuario}}'.toUpperCase() + " - " + '{{subseccionNombre}}'.toUpperCase() )
+    });
+</script>
+{% endblock %}
+{% endblock %}
