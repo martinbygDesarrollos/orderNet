@@ -10,12 +10,12 @@
                 </tr>
             </thead>
             <tbody>
-            {{ dump(usuarios) }}
-                {# {% for oneItem in usuarios %}
+            {# {{ dump(usuarios) }} #}
+                {% for oneItem in usuarios %}
                     <tr id="{{ oneItem['id'] }}">
                         <td>{{ oneItem['usuario'] }}</td>
                     </tr>
-                {% endfor %} #}
+                {% endfor %}
             </tbody>
         </table>
     </div>
