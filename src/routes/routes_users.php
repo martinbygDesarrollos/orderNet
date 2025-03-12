@@ -69,7 +69,7 @@ return function (App $app){
 			$idSeccion = $args['id'];
 			$responseCall = $userController->getAllSubSectionsOfSection($idSeccion, $responseCurrentSession->currentSession->empresa);
 			$args['subsecciones'] = $responseCall->subsecciones ?? array();
-			$args['seccion'] = $responseCall->seccion;
+			$args['seccion'] = $responseCall->seccion ?? $userController->getSectionData($idSeccion)->seccion->nombre;
 			return $this->view->render($response, "subSections-user.twig", $args);
 		} else {
 			return $response->withRedirect($request->getUri()->getBaseUrl());

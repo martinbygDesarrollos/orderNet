@@ -169,6 +169,17 @@ class ctr_users{
 		return $response;
 	}
 
+	public function getSectionData($idSeccion){
+		$userClass = new users();
+		$response = new \stdClass();
+		$responseGetSection = $userClass->getSectionData($idSeccion);
+		if($responseGetSection->result == 2){
+			$response->result = 2;
+			$response->seccion = $responseGetSection->objectResult;
+		}else return $responseGetSection;
+		return $response;
+	}
+
 	public function getArticle($id){
 		$userClass = new users();
 		$response = new \stdClass();

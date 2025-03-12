@@ -117,6 +117,21 @@ body {
     justify-content: center;
 }
 
+#btn_savePositions{
+    position: absolute;
+    right: 2rem;
+    bottom: 5rem;
+    height: 4rem;
+    width: 4rem;
+}
+#btn_savePositions.hide{
+    display: none;
+}
+
+#btn_savePositions.show{
+    display: block;
+}
+
 /* Base state for all rows */
 #tableCarrito tbody tr {
     transition: opacity 0.3s ease, transform 0.3s ease;

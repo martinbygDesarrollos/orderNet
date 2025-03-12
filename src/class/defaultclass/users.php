@@ -129,6 +129,14 @@ class users{
 		return $responseQuery;
 	}
 
+	public function getSectionData($idSeccion){
+		$dbClass = new DataBase();
+		$responseQuery = $dbClass->sendQuery("SELECT * FROM seccion WHERE id = ?", array('i', $idSeccion), "OBJECT");
+		if($responseQuery->result == 1)
+			$responseQuery->message = "El identificador ingresado no corresponde a un proveedor registrado.";
+		return $responseQuery;
+	}
+
 	public function getArticle($id){
 		$dbClass = new DataBase();
 		$articulo = new \stdClass();

@@ -38,6 +38,10 @@ $(document).ready(function() {
             newItem(articulo, cantidad)
         }
     })
+
+    $('#btn_savePositions').on('click', function(){
+        console.log("guardar nuevas posiciones")
+    })
 })
 
 function newItem(articulo, cantidad){
