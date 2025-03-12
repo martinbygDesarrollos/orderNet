@@ -505,7 +505,8 @@ class users{
 			JOIN subseccion s ON i_s.subseccion = s.id
 			JOIN articulo a ON i.articulo = a.id
 			WHERE s.id = ? 
-			AND s.empresa = ?";
+			AND s.empresa = ?
+			ORDER BY i.posicion ASC";
 		$responseQuery = $dbClass->sendQuery($query, array('ii', $idSubSeccion, $empresa), "LIST");
 		if($responseQuery->result == 2){
 			$items = array();
