@@ -363,6 +363,7 @@ class users{
 
 	public function getAllNormalUsers($empresa){
 		$dbClass = new DataBase(); 
+		$response = new \stdClass();
 		$responseQuery = $dbClass->sendQuery("SELECT * FROM usuario WHERE empresa = ? AND permisos = ?", array('is', $empresa, "normal"), "LIST");
 		if($responseQuery->result == 2){
 			$usuarios = array();
