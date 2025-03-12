@@ -176,6 +176,7 @@ class users{
 
 	public function getUserData($userId){ // A partir de un userID traigo toda su info y secciones
 		$dbClass = new DataBase();
+		$response = new \stdClass();
 		$usuario = new \stdClass();
 		// Consulta para obtener al usuario y sus secciones en una sola operación
 		$query = "SELECT u.*, s.id as seccion_id, s.nombre as seccion_nombre
@@ -379,6 +380,7 @@ class users{
 
 	public function getArticlesInCart($userId){
 		$dbClass = new DataBase();
+		$response = new \stdClass();
 		$responseQuery = $dbClass->sendQuery("SELECT ca.articulo as id, a.detalle as articulo, ca.cantidad
 												FROM carrito_articulo ca
 												JOIN carrito c ON ca.carrito = c.id
@@ -398,6 +400,7 @@ class users{
 
 	public function getArticlesInCartWithCode($userId){
 		$dbClass = new DataBase();
+		$response = new \stdClass();
 		$responseQuery = $dbClass->sendQuery("SELECT ca.articulo as id, a.detalle as articulo, ca.cantidad as cantidad, pa.proveedor as proveedor, pa.codigo as codigo, p.nombre as proveedor_nombre
 												FROM carrito_articulo ca
 												JOIN carrito c ON ca.carrito = c.id
@@ -430,7 +433,6 @@ class users{
 				];
 			}
 			
-			$response = new \stdClass();
 			// Convert associative array to indexed array if needed
 			$response->proveedores = $proveedores;
 			$response->result = 2;
@@ -453,6 +455,8 @@ class users{
 
 	public function getAllSubSectionsOfSection($idSeccion, $empresa){
 		$dbClass = new DataBase();
+		$response = new \stdClass();
+
 		$query = "SELECT sub.id, sub.nombre, sec.id as seccion_id, sec.nombre as seccion, ss.estado, ss.fecha
 			FROM subseccion sub
 			JOIN seccion_subseccion ss ON sub.id = ss.subseccion
@@ -477,6 +481,8 @@ class users{
 
 	public function getUserSections($sectionId, $userId){
 		$dbClass = new DataBase();
+		$response = new \stdClass();
+
 		$query = "SELECT estado, fecha
 			FROM usuario_seccion
 			WHERE usuario = ?
@@ -491,6 +497,8 @@ class users{
 
 	public function getAllItemsOfSubsection($idSubSeccion, $empresa){
 		$dbClass = new DataBase();
+		$response = new \stdClass();
+
 		$query = "SELECT i.id, i.cantidad, i.posicion, i.articulo as articulo_id, a.detalle as articulo_detalle, s.nombre as subseccion
 			FROM item i 
 			JOIN item_subseccion i_s ON i.id = i_s.item 
@@ -513,6 +521,8 @@ class users{
 
 	public function getAllSections($empresa){ // Devuelve todas las secciones con sus respectivos usuarios
 		$dbClass = new DataBase();
+		$response = new \stdClass();
+
 		$query = "SELECT s.*, u.id as usuario_id, u.usuario as usuario_nombre
 			FROM seccion s
 			LEFT JOIN usuario_seccion us ON s.id = us.seccion
@@ -555,6 +565,8 @@ class users{
 
 	public function getAllSectionsOfUser($userId){ // Devuelve todas las secciones con sus respectivos usuarios
 		$dbClass = new DataBase();
+		$response = new \stdClass();
+
 		$query = "SELECT s.id, s.nombre, s.empresa, us.estado, us.fecha
 			FROM seccion s
 			JOIN usuario_seccion us ON s.id = us.seccion
@@ -581,6 +593,8 @@ class users{
 
 	public function getAllArticlesSimple($empresa){ // Devuelve todas los articulos y nada mas
 		$dbClass = new DataBase();
+		$response = new \stdClass();
+
 		$responseQuery = $dbClass->sendQuery("SELECT * FROM articulo WHERE empresa = ?", array('i', $empresa), "LIST");
 		if($responseQuery->result == 2){
 			$articulos = array();
@@ -595,6 +609,8 @@ class users{
 	}
 	public function getAllArticles($empresa, $limit, $from){ // Devuelve todas los articulos con sus respectivos proveedores (Puede tener LIMIT y DESDE qué ID)
 		$dbClass = new DataBase();
+		$response = new \stdClass();
+
 		$limit = $limit != 0 ? "LIMIT $limit" : "";
 		$query = "SELECT a.*, p.id as proveedor_id, p.nombre as proveedor_nombre, pa.codigo as proveedor_codigo
 			FROM articulo a
@@ -641,6 +657,8 @@ class users{
 
 	public function getAllSubSections($empresa){
 		$dbClass = new DataBase();
+		$response = new \stdClass();
+
 		$responseQuery = $dbClass->sendQuery("SELECT * FROM subseccion WHERE empresa = ?", array('i', $empresa), "LIST");
 		if($responseQuery->result == 2){
 			$subsecciones = array();
@@ -655,6 +673,8 @@ class users{
 
 	public function getAllProviders($empresa){
 		$dbClass = new DataBase();
+		$response = new \stdClass();
+
 		$responseQuery = $dbClass->sendQuery("SELECT * FROM proveedor WHERE empresa = ?", array('i', $empresa), "LIST");
 		if($responseQuery->result == 2){
 			$proveedores = array();
