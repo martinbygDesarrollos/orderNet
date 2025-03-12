@@ -97,7 +97,34 @@ return function (App $app){
 				}
 			}
 			if($existSubsection){ // Si la seccion en la ruta contiene la subseccion en la ruta OK
+				$articles = $userController->getArticlesInCart($responseCurrentSession->currentSession->id)->articulos;
 				$args['items'] = $userController->getAllItemsOfSubsection($idSubSeccion, $responseCurrentSession->currentSession->empresa)->items ?? array();
+				foreach ($articles as $artInCart) {
+					foreach ($args['items'] as &$item) {  // Note the & to modify by reference
+						if ($item['articulo'] === $artInCart['articulo']) {
+							// When matching articles are found, add the 'cantidad' attribute
+							$item['cantidad_inCart'] = $artInCart['cantidad'];
+							break;  // Exit inner loop once match is found
+						}
+					}
+					unset($item); // Limpiamos la referencia
+				}
+
+				// foreach ($articles as $artInCart) {
+				// 	echo $artInCart['articulo'] . "<br>";
+				// }
+				// echo "<br>";
+				// foreach ($args['items'] as $item) {
+				// 	echo $item['articulo'] . $item['cantidad_inCart'] . "<br>";
+				// }
+				// // Assuming $articles and $args['items'] are your two arrays
+				// echo "<br>";
+				// var_dump($args['items']);
+				// foreach ($args['items'] as $item) {
+				// 	echo $item['articulo'] . " " . $item['cantidad_inCart'] . "<br>";
+				// }
+				// var_dump($articles);
+				// var_dump($args['items']);
 			} else { // La subseccion de la ruta no corresponde a esa seccion ERROR
 				return $response->withRedirect($request->getUri()->getBaseUrl());
 			}
@@ -176,6 +203,40 @@ return function (App $app){
 			$args['systemSession'] = $responseCurrentSession->currentSession;
 			$args['versionerp'] = '?'.FECHA_ULTIMO_PUSH;
 			$args['carrito_count'] = $userController->getCountArticlesInCart($responseCurrentSession->currentSession->id)->cantidad ?? 0;
+			// $proveedores = $userController->getArticlesInCartWithCode($responseCurrentSession->currentSession->id)->proveedores ?? array();
+			// $args['proveedores'] = $proveedores;
+
+			$proveedores = $userController->getArticlesInCartWithCode($responseCurrentSession->currentSession->id)->proveedores ?? array();
+
+			// Keep track of which articles we've already seen
+			$seenArticles = [];
+
+			// Create a new filtered array of providers
+			$filteredProveedores = [];
+
+			foreach ($proveedores as $proveedor) {
+				$filteredArticulos = [];
+				
+				foreach ($proveedor['articulos'] as $articulo) {
+					$articuloId = $articulo['id'];
+					
+					// Only keep this article if we haven't seen it before
+					if (!in_array($articuloId, $seenArticles)) {
+						$filteredArticulos[] = $articulo;
+						$seenArticles[] = $articuloId;
+					}
+				}
+				
+				// Only add this provider if it has any articles left
+				if (count($filteredArticulos) > 0) {
+					$proveedor['articulos'] = $filteredArticulos;
+					$filteredProveedores[] = $proveedor;
+				}
+			}
+
+			// Replace the original providers with the filtered ones
+			$args['proveedores'] = $filteredProveedores;
+
 			// $args['articulos'] = $userController->getAllArticles($responseCurrentSession->currentSession->empresa, 20, 0)->articulos ?? array();
 			return $this->view->render($response, "carrito.twig", $args);
 		} else {
@@ -216,6 +277,18 @@ return function (App $app){
 			$data = $request->getParams();
 			$userId = $data['id'];
 			return json_encode($userController->getUserData($userId));
+		}else return json_encode($responseCurrentSession);
+	});
+
+	$app->post('/exportOrder', function(Request $request, Response $response) use ($userController){
+		$responseCurrentSession = $userController->validateCurrentSession();
+		if($responseCurrentSession->result == 2){
+			$data = $request->getParams();
+			$articles = $data['articles'];
+			$provider = $data['provider'];
+			// var_dump($articles);
+			// var_dump($provider);
+			return json_encode($userController->exportOrder($provider, $articles));
 		}else return json_encode($responseCurrentSession);
 	});
 

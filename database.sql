@@ -24,7 +24,7 @@ CREATE TABLE `seccion`(
   FOREIGN KEY (empresa) REFERENCES `empresa`(id)
 );
 
-CREATE TABLE `subSeccion`(
+CREATE TABLE `subseccion`(
   `id` int(11) PRIMARY KEY AUTO_INCREMENT,
   `nombre` VARCHAR(50) NOT NULL,
   `empresa` int(11),

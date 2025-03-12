@@ -13,7 +13,13 @@
             </thead>
             <tbody>
                 {% for item in items %}
-                    <tr id="{{ item['id'] }}">
+                    {# <tr id="{{ item['id'] }}" {% if item['cantidad_inCart'] %} class="inTheCart" {% endif %}> #}
+                    <tr id="{{ item['id'] }}" 
+                        {% if item['cantidad_inCart'] %} 
+                            class="inTheCart" 
+                            data-quantity="{{ item['cantidad_inCart'] }}"
+                        {% endif %}>
+                    {# <tr id="{{ item['id'] }}" {% if {{ item['cantidad_inCart'] }} %} class="inTheCart" {% endif %}> #}
                         <td>{{ item['articulo'] }}</td>
                         <td>{{ item['cantidad'] }}</td>
                         <td style="display: flex; flex-direction: row;"><button id="" class="btnRemoveFromCart ml-2 btn template-btn"> <i class="fas fa-minus"></i> </button> <button id="" class="btnAddToCart ml-2 btn template-btn"> <i class="fas fa-plus"></i> </button></td>
@@ -31,9 +37,7 @@
     $(document).ready( function(){
         console.log("Ready!")
         const itemsCount = {{carrito_count}} > 0 ? {{carrito_count}} : 0;
-
         document.documentElement.style.setProperty('--cart-items', `"${itemsCount}"`);
-        
         if(itemsCount > 0){
             $('#cart').addClass('withItems')
         }

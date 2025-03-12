@@ -1,6 +1,7 @@
 <?php
 
 require_once '../src/class/defaultclass/users.php';
+require_once '../src/filemanagement/excel_management.php';
 
 class ctr_users{
 	public function signIn($user, $password){
@@ -233,12 +234,31 @@ class ctr_users{
 		
 		if(isset($cartId)){
 			$responseInsertArticle = $userClass->addArticleToCart($articleId, $cartId);
-			$response = $responseInsertArticle;
+			$responseGetCountArticles = $userClass->getCountArticlesInCart($userId);
+			$response->cantidad = $responseGetCountArticles->objectResult->total_items;
+			$response->id = $responseInsertArticle->id;
+			$response->result = 2;
 		} else {
 			$response->result = 0;
 			$response->message = "Error interno del servidor";
 		}
 		return $response;
+	}
+
+	public function getArticlesInCartWithCode($userId){
+		$userClass = new users();
+		return $userClass->getArticlesInCartWithCode($userId);
+	}
+
+	public function getArticlesInCart($userId){
+		$userClass = new users();
+		return $userClass->getArticlesInCart($userId);
+	}
+
+	public function exportOrder($provider, $articles){
+		$excel = new excel_management();
+		// $response = new \stdClass();
+		return $excel->exportOrder($provider, $articles);
 	}
 
 	public function reduceArticleToCart($itemId, $userId){ // HERE
@@ -258,8 +278,12 @@ class ctr_users{
 		}
 		
 		if(isset($cartId)){
-			$responseInsertArticle = $userClass->reduceArticleToCart($articleId, $cartId);
-			$response = $responseInsertArticle;
+			$responseReduceArticle = $userClass->reduceArticleToCart($articleId, $cartId);
+			$responseGetCountArticles = $userClass->getCountArticlesInCart($userId);
+			$response->cantidad = $responseGetCountArticles->objectResult->total_items ?? 0;
+			$response->id = $responseReduceArticle->id;
+			$response->result = 2;
+			// var_dump($response->cantidad);
 		} else {
 			$response->result = 0;
 			$response->message = "Error interno del servidor";

@@ -374,7 +374,81 @@ class users{
 			$response->result = 2;
 		} else return $responseQuery;
 		return $response;
-	}	
+	}
+
+	public function getArticlesInCart($userId){
+		$dbClass = new DataBase();
+		$responseQuery = $dbClass->sendQuery("SELECT ca.articulo as id, a.detalle as articulo, ca.cantidad
+												FROM carrito_articulo ca
+												JOIN carrito c ON ca.carrito = c.id
+												JOIN articulo a ON ca.articulo = a.id 
+												WHERE c.usuario = ?", array('i', $userId), "LIST");
+		if($responseQuery->result == 2){
+			$articulos = array();
+			// var_dump($responseQuery->listResult);
+			foreach ($responseQuery->listResult as $key => $row) {
+				$articulos[] = ['id' => $row['id'], 'articulo' => $row['articulo'], 'cantidad' => $row['cantidad']];
+			}
+			$response->articulos = $articulos;
+			$response->result = 2;
+		} else return $responseQuery;
+		return $response;
+	}
+
+	public function getArticlesInCartWithCode($userId){
+		$dbClass = new DataBase();
+		$responseQuery = $dbClass->sendQuery("SELECT ca.articulo as id, a.detalle as articulo, ca.cantidad as cantidad, pa.proveedor as proveedor, pa.codigo as codigo, p.nombre as proveedor_nombre
+												FROM carrito_articulo ca
+												JOIN carrito c ON ca.carrito = c.id
+												JOIN articulo a ON ca.articulo = a.id 
+												JOIN proveedor_articulo pa ON a.id = pa.articulo
+                                                JOIN proveedor p ON pa.proveedor = p.id
+												WHERE c.usuario = ?", array('i', $userId), "LIST");
+
+		if($responseQuery->result == 2){
+			$proveedores = array();
+			
+			foreach ($responseQuery->listResult as $row) {
+				$proveedorId = $row['proveedor'];
+				
+				// Initialize the provider array if it doesn't exist yet
+				if (!isset($proveedores[$proveedorId])) {
+					$proveedores[$proveedorId] = array(
+						'proveedor_id' => $proveedorId,
+						'proveedor_nombre' => $row['proveedor_nombre'],
+						'articulos' => array()
+					);
+				}
+				
+				// Add the article to this provider's articles array
+				$proveedores[$proveedorId]['articulos'][] = [
+					'id' => $row['id'], 
+					'articulo' => $row['articulo'], 
+					'cantidad' => $row['cantidad'],
+					'codigo' => $row['codigo']
+				];
+			}
+			
+			$response = new \stdClass();
+			// Convert associative array to indexed array if needed
+			$response->proveedores = $proveedores;
+			$response->result = 2;
+			// var_dump($proveedores);
+		} else {
+			return $responseQuery;
+		}
+		/////////////////////////////////////////////////////////////////////////////////////////////
+		// if($responseQuery->result == 2){
+		// 	$articulos = array();
+		// 	// var_dump($responseQuery->listResult);
+		// 	foreach ($responseQuery->listResult as $key => $row) {
+		// 		$articulos[] = ['id' => $row['id'], 'articulo' => $row['articulo'], 'cantidad' => $row['cantidad']];
+		// 	}
+		// 	$response->articulos = $articulos;
+		// 	$response->result = 2;
+		// } else return $responseQuery;
+		return $response;
+	}
 
 	public function getAllSubSectionsOfSection($idSeccion, $empresa){
 		$dbClass = new DataBase();

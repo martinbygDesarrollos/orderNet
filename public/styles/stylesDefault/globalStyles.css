@@ -79,6 +79,7 @@ body {
     --amarillo-ambar2: #ffb700;
     --blanco: #FFFFFF;
     --cart-items: "0";
+    --cart-item-count: "0";
     
     /* Variables para uso específico */
     --color-texto-principal: var(--negro-puro);
@@ -90,7 +91,18 @@ body {
     --color-fondo-suave: var(--amarillo-palido);
     --color-borde: var(--gris-medio);
 }
-#tableUsers tr td, #tableUsers tr th, #tableSubSections tr td, #tableSubSections tr th, #tableSections tr td, #tableSections tr th, #tableProviders tr td, #tableProviders tr th, #tableItems tr td, #tableItems tr th{
+#tableUsers tr td, 
+#tableUsers tr th, 
+#tableSubSections tr td, 
+#tableSubSections tr th, 
+#tableSections tr td, 
+#tableSections tr th, 
+#tableProviders tr td, 
+#tableProviders tr th, 
+#tableItems tr td, 
+#tableItems tr th,
+#tableCarrito tr th
+{
     text-align: center !important;
 }
 
@@ -102,7 +114,66 @@ body {
     text-align: center !important;
 }
 #tableItemsUser tr td:nth-child(3){
-    justify-content: center
+    justify-content: center;
+}
+
+/* Base state for all rows */
+#tableCarrito tbody tr {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform-origin: top;
+}
+
+/* Animation states */
+#tableCarrito tbody tr.hiding {
+    opacity: 0;
+    transform: scaleY(0);
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    pointer-events: none;
+}
+
+#tableCarrito tbody tr.showing {
+    opacity: 0;
+    transform: scaleY(0);
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/* Completely hidden state - no space taken */
+#tableCarrito tbody tr.hidden-completely {
+    display: none !important;
+}
+
+/* Regular visible state */
+#tableCarrito tbody tr:not(.hiding):not(.showing):not(.hidden-completely) {
+    opacity: 1;
+    transform: scaleY(1);
+    max-height: 50px; /* Adjust based on your row heights */
+}
+/* Center align the code and quantity columns in regular rows */
+#tableCarrito tbody tr:not(.provider-header) td:nth-child(2), 
+#tableCarrito tbody tr:not(.provider-header) td:nth-child(3) {
+    text-align: center !important;
+}
+
+/* For the provider header rows */
+.provider-header td {
+    width: 100%;
+}
+.btnShowItems{
+    background-color: transparent;
+    border: none;
+}
+
+/* Create a separate style for the content within the cell */
+.provider-header td .header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .dropdown-toggle::after{
@@ -139,6 +210,23 @@ body {
     top: 0;
     content: var(--cart-items, "2");
     background-color: red;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 1rem;
+}
+
+#tableItemsUser tbody tr{
+    position: relative;
+    content: none;
+}
+
+#tableItemsUser tbody tr.inTheCart::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: attr(data-quantity);
+    background-color: red;
+    color: white;
     padding-left: .5rem;
     padding-right: .5rem;
     border-radius: 1rem;
@@ -273,7 +361,7 @@ body {
     flex-direction: row !important;
 }
 
-#navbarNav ul li a{
+#navbarNav ul li>a{
     height: 40px;
     width: 40px;
     display: flex;

@@ -26,20 +26,29 @@ function addItemToCart(id){
         .then((response)=>{
             if (response.result == 2){
                 count += 1
+                console.log(count)
+                console.log(parseInt(response.cantidad))
                 if(count <= 0){
                     $('#cart').removeClass('withItems')
                 } else {
                     if(!$('#cart').hasClass('withItems')){
                         $('#cart').addClass('withItems')
                     }
-                    $('#cart').addClass('playAnimation')
-                    setTimeout(() => {
-                        $('#cart').removeClass('playAnimation');
-                    }, 200);
+                    if(response.cantidad == count){
+                        $('#cart').addClass('playAnimation')
+                        setTimeout(() => {
+                            $('#cart').removeClass('playAnimation');
+                        }, 200);
+                        document.documentElement.style.setProperty('--cart-items', `"${count}"`);
+                        $('#' + id).attr('data-quantity', (parseInt($('#' + id).attr('data-quantity')) || 0) + 1 )
+                        if(parseInt($('#' + id).attr('data-quantity')) > 0){
+                            if(!$('#' + id).hasClass('inTheCart'))
+                                $('#' + id).addClass('inTheCart')
+                        }
+                    }
                 }
                 
                 console.log('Agregando al carrito el item con ID:', id);
-                document.documentElement.style.setProperty('--cart-items', `"${count}"`);
                 console.log(response)
             } else {
                 console.log("error")
@@ -50,26 +59,37 @@ function addItemToCart(id){
         })
 }
 
-function reduceItemToCart(id){
+function reduceItemToCart(id){ // VER CUANDO ES EL ULTIMO QUE QUEDA
     let count = getCartItemsCount()
 
     sendAsyncPost("reduceItemToCart", { id: id })
         .then((response)=>{
             if (response.result == 2){
                 count -= 1
+                console.log(response.cantidad)
+                console.log(count)
                 if(count <= 0){
                     $('#cart').removeClass('withItems')
+                    document.documentElement.style.setProperty('--cart-items', `"0"`);
+                    $('#' + id).attr('data-quantity', 0)
+                    $('#' + id).removeClass('inTheCart')
                 } else {
                     if(!$('#cart').hasClass('withItems')){
                         $('#cart').addClass('withItems')
                     }
-                    $('#cart').addClass('playAnimation')
-                    setTimeout(() => {
-                        $('#cart').removeClass('playAnimation');
-                    }, 200);
+                    if(response.cantidad == count){
+                        $('#cart').addClass('playAnimation')
+                        setTimeout(() => {
+                            $('#cart').removeClass('playAnimation');
+                        }, 200);
+                        document.documentElement.style.setProperty('--cart-items', `"${count <= 0 ? 0 : count}"`);
+                        $('#' + id).attr('data-quantity', (parseInt($('#' + id).attr('data-quantity')) || 0) - 1 ) // SOLO UN DETALLE AQUI
+                        if($('#' + id).attr('data-quantity') <= 0){
+                            $('#' + id).removeClass('inTheCart')
+                        }
+                    }
                 }
                 console.log('Quitando del carrito el item con ID:', id);
-                document.documentElement.style.setProperty('--cart-items', `"${count <= 0 ? 0 : count}"`);
                 console.log(response)
             } else {
                 console.log("error")
