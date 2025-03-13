@@ -15,17 +15,20 @@ class ctr_users{
 				$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 				$responseUpdatePassword = $userClass->updateUserPassword($responseGetUser->objectResult->id, $hashedPassword);
 				if($responseUpdatePassword->result == 2){
+					$userClass->verifyCart($responseGetUser->objectResult->id);
 					return $userClass->setNewTokenAndSession($responseGetUser->objectResult->id);
 				}else return $responseUpdatePassword;
 			} else {
 				// Use password_verify instead of strcmp
 				if(password_verify($password, $responseGetUser->objectResult->pass)){
+					$userClass->verifyCart($responseGetUser->objectResult->id);
 					return $userClass->setNewTokenAndSession($responseGetUser->objectResult->id);
 				} else {
 					$response->result = 0;
 					$response->message = "Usuario y contraseña no coinciden por favor vuelva a ingresarlos.";
 				}
 			}
+
 		}else return $responseGetUser;
 
 		return $response;
@@ -180,6 +183,17 @@ class ctr_users{
 		return $response;
 	}
 
+	public function getSubSectionData($idSubSeccion){
+		$userClass = new users();
+		$response = new \stdClass();
+		$responseGetSubSection = $userClass->getSubSectionData($idSubSeccion);
+		if($responseGetSubSection->result == 2){
+			$response->result = 2;
+			$response->subseccion = $responseGetSubSection->objectResult;
+		}else return $responseGetSubSection;
+		return $response;
+	}
+
 	public function getArticle($id){
 		$userClass = new users();
 		$response = new \stdClass();
@@ -210,6 +224,23 @@ class ctr_users{
 		if($responseGetProvider->result == 2){
 			$response->result = 2;
 		}else return $responseGetProvider;
+		return $response;
+	}
+
+	public function newItemOrder($positions){
+		$userClass = new users();
+		$response = new \stdClass();
+		foreach ($positions as $item) {
+			// var_dump(intval($item['id']) );
+			// var_dump(intval($item['position']));
+			$responseNewPositions = $userClass->setNewItemOrder(intval($item['id']), intval($item['position']));
+			if($responseNewPositions->result != 2){
+				$response->result = 1;
+				$response->message = "Error al momento de re-ordenar los items de la sección";
+				return $response;
+			}
+		}
+		$response->result = 2;
 		return $response;
 	}
 

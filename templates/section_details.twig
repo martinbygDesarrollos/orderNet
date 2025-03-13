@@ -28,6 +28,11 @@
 <script type="text/javascript" src="{{ path_for('Start') }}scripts/utils/sendPost.js{{ versionerp }}"></script>
 <script type="text/javascript" src="{{ path_for('Start') }}scripts/utils/utils.js{{ versionerp }}"></script>
 <script type="text/javascript">
+    $(document).ready( function(){
+        console.log("Ready!")
+        
+        $('#titlePage').text('{{systemSession.usuario}}'.toUpperCase() + " - " + '{{seccion.nombre}}'.toUpperCase() )
+    });
 </script>
 {% endblock %}
 {% endblock %}

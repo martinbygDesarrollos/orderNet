@@ -155,6 +155,8 @@ return function (App $app){
 			$idSeccion = $args['id'];
 			
 			$args['subsecciones'] = $userController->getAllSubSectionsOfSection($idSeccion, $responseCurrentSession->currentSession->empresa)->subsecciones ?? array();
+			$args['seccion'] = $userController->getSectionData($idSeccion)->seccion;
+
 			return $this->view->render($response, "section_details.twig", $args);
 		} else {
 			return $response->withRedirect($request->getUri()->getBaseUrl());
@@ -253,6 +255,7 @@ return function (App $app){
 			$idSubSeccion = $args['id'];
 			
 			$args['items'] = $userController->getAllItemsOfSubsection($idSubSeccion, $responseCurrentSession->currentSession->empresa)->items ?? array();
+			$args['subSeccion'] = $userController->getSubSectionData($idSubSeccion)->subseccion;
 			return $this->view->render($response, "items.twig", $args);
 		} else {
 			return $response->withRedirect($request->getUri()->getBaseUrl());
@@ -289,6 +292,15 @@ return function (App $app){
 			// var_dump($articles);
 			// var_dump($provider);
 			return json_encode($userController->exportOrder($provider, $articles));
+		}else return json_encode($responseCurrentSession);
+	});
+
+	$app->post('/newItemOrder', function(Request $request, Response $response) use ($userController){
+		$responseCurrentSession = $userController->validateCurrentSession();
+		if($responseCurrentSession->result == 2){
+			$data = $request->getParams();
+			$positions = $data['positions'];
+			return json_encode($userController->newItemOrder($positions));
 		}else return json_encode($responseCurrentSession);
 	});
 

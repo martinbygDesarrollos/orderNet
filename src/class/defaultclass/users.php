@@ -9,7 +9,7 @@ class users{
 		$dbClass = new DataBase();
 		return $dbClass->sendQuery("UPDATE usuario SET pass = ? WHERE id = ?", array('si', $newPassword, $userId), "BOOLE");
 	}
-	
+
 	public function getUser($usuario){
 		$dbClass = new DataBase();
 		$responseQuery = $dbClass->sendQuery("SELECT * FROM usuario WHERE usuario = ?", array('s', $usuario), "OBJECT");
@@ -52,6 +52,11 @@ class users{
 		if($responseQuery->result == 1)
 			$responseQuery->message = "El identificador ingresado no corresponde a un item registrado.";
 		return $responseQuery;
+	}
+
+	public function setNewItemOrder($id, $position){
+		$dbClass = new DataBase();
+		return $dbClass->sendQuery("UPDATE item SET posicion = ? WHERE id = ?", array('ii', $position, $id), "BOOLE");
 	}
 
 	public function getCountArticlesInCart($userId){
@@ -133,8 +138,59 @@ class users{
 		$dbClass = new DataBase();
 		$responseQuery = $dbClass->sendQuery("SELECT * FROM seccion WHERE id = ?", array('i', $idSeccion), "OBJECT");
 		if($responseQuery->result == 1)
-			$responseQuery->message = "El identificador ingresado no corresponde a un proveedor registrado.";
+			$responseQuery->message = "El identificador ingresado no corresponde a una seccion registrada.";
 		return $responseQuery;
+	}
+
+	public function getSubSectionData($idSubSeccion){
+		$dbClass = new DataBase();
+		$responseQuery = $dbClass->sendQuery("SELECT * FROM subseccion WHERE id = ?", array('i', $idSubSeccion), "OBJECT");
+		if($responseQuery->result == 1)
+			$responseQuery->message = "El identificador ingresado no corresponde a una subseccion registrada.";
+		return $responseQuery;
+	}
+
+	public function verifyCart($userId){
+		date_default_timezone_set('America/Montevideo');
+		$dbClass = new DataBase();
+		$userClass = new users();
+
+		$responseQuery = $dbClass->sendQuery("SELECT * FROM carrito WHERE usuario = ?", array('i', $userId), "OBJECT");
+		if($responseQuery->result == 2){
+			$dateString = $responseQuery->objectResult->fecha;
+			$date = DateTime::createFromFormat("YmdHis", $dateString);
+			$now = new DateTime();
+			$lastSunday = clone $now; // Clone to avoid modifying $now
+			$lastSunday->modify('last sunday')->setTime(0, 0, 0);
+			if ($date < $lastSunday) { // El carrito es viejo
+				$userClass->updateCartDate($responseQuery->objectResult->id);
+				$userClass->cleanCart($responseQuery->objectResult->id);
+				$userClass->resetAllSectionsAndSubSections($userId);
+			} else { // El carrito es de esta semana
+
+			}
+		}
+	}
+
+	public function resetAllSectionsAndSubSections($userId){ // Esta funcion deja como sin hacer a todos los inventario si secciones del usuario (cuando se resetea el carrito deberia resetearse esto tambien)
+		$dbClass = new DataBase();
+		$userClass = new users();
+		$response = new \stdClass();
+		$secciones = $userClass->getAllSectionsOfUser($userId)->secciones;
+		foreach ($secciones as $seccion) {
+			$dbClass->sendQuery("UPDATE usuario_seccion SET estado = 0, fecha = null WHERE usuario = ? AND seccion = ?", array('ii', $userId, $seccion['id']), "BOOLE");
+			$subsecciones = $userClass->getAllSubSectionsOfSection($seccion['id'], 1)->subsecciones;
+			foreach ($subsecciones as $subseccion) {
+				$dbClass->sendQuery("UPDATE seccion_subseccion SET estado = 0, fecha = null WHERE seccion = ? AND subseccion = ?", array('ii', $seccion['id'], $subseccion['id']), "BOOLE");
+			}
+		}
+		$response->result = 2;
+		return $response;
+	}
+
+	public function cleanCart($cartId){ // Elimina todos los articulos del carrito
+		$dbClass = new DataBase();	
+		return $dbClass->sendQuery("DELETE FROM carrito_articulo WHERE carrito = ?", array('i', $cartId), "BOOLE");
 	}
 
 	public function getArticle($id){
@@ -235,6 +291,13 @@ class users{
 		$dbClass = new DataBase();
 		$today = date('Ymdhis');
 		$responseQuery = $dbClass->sendQuery("INSERT INTO carrito (fecha, usuario) VALUES (?,?)", array('si', $today, $userId), "BOOLE");
+		return $responseQuery;
+	}
+
+	public function updateCartDate($cartId){
+		$dbClass = new DataBase();
+		$today = date('Ymdhis');
+		$responseQuery = $dbClass->sendQuery("UPDATE carrito SET fecha = ? WHERE id = ?", array('si', $today, $cartId), "BOOLE");
 		return $responseQuery;
 	}
 
