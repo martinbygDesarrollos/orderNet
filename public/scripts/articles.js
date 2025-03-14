@@ -107,21 +107,29 @@ $(document).ready(function() {
     });
 
     $(document).on('click', 'input[type="checkbox"]', function(event) {
-        console.log('click overCheck')
-        let checkedBoxes = $('#providersTable tbody input[type="checkbox"]:checked');
-        // If this is the only one checked, prevent unchecking
-        if (checkedBoxes.length == 1 && $(this).prop('checked') == false) {
-            $(this).prop('checked', true)
+        console.log('click overCheck');
+        
+        // Store the current state before any changes
+        let isChecked = $(this).prop('checked');
+        
+        console.log($(this).closest('table').attr('id'))
+        // If this checkbox is being unchecked and it's the only one checked
+        let otherCheckedBoxes = $('#'+ $(this).closest('table').attr('id') +' tbody input[type="checkbox"]:checked').not(this).length;
+        
+        if (otherCheckedBoxes === 0 && !isChecked) {
+            console.log('Prevented unchecking the last checkbox');
+            $(this).prop('checked', true);
             event.preventDefault();
+            event.stopPropagation();
             return false;
         }
-
+        
         // Get the closest tr and find the input field
         let row = $(this).closest('tr');
         let inputField = row.find('input[type="text"]');
-
+        
         // Enable/Disable the input field based on checkbox state
-        inputField.prop('disabled', !$(this).prop('checked'));
+        inputField.prop('disabled', !isChecked);
     });
 
 })
