@@ -360,15 +360,20 @@ class ctr_users{
 							$response->result = 2;
 						}
 					}
+				} else {
+					$response->result = 1;
 				}
+			} else {
+				$response->result = 1;
 			}
-			$response->result = 2;
 		}else return $responseGetProvider;
 		return $response;
 	}
 
 	public function changeStatusSection($user, $section, $status){
 		$userClass = new users();
+		$response = new \stdClass();
+
 		$responseGetProvider = $userClass->changeStatusSection($user, $section, $status);
 		if($responseGetProvider->result == 2){
 			$response->result = 2;

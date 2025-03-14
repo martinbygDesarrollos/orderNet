@@ -46,6 +46,7 @@ function changeStatus(seccion, subseccion, status){
                 //     cargarSecciones(response.secciones, response.usuario.id, response.usuario.usuario);
                 // $('#modalEditUser').modal('show')
             } else {
+                mostrarLoader(false)
                 console.log("error")
             }
         })

@@ -121,17 +121,21 @@ function export_order(element){
     // console.log(dataToSend)
     mostrarLoader(true)
     sendAsyncPost("exportOrder" , dataToSend)
-	.then((response)=>{
-        // stopPrograssBar(progressBarIdProcess);
-		mostrarLoader(false)
-        console.log(response)
-		// $('#progressbar').modal("hide");
-		if ( response.result != 2 ){
-			showReplyMessage(response.result, response.message, "Detalle de exportacion", null);
-		}else if ( response.result == 2 ){
-			// showReplyMessage(response.result, response.message, "Detalle de exportacion", null);
-			// window.location.href = getSiteURL() + 'downloadExcel.php?n='+response.name;
-			window.location.href = getSiteURL() + 'downloadExcel.php?n='+response.name + '&a=' + response.finalName ;
-		}
-	})
+        .then((response)=>{
+            // stopPrograssBar(progressBarIdProcess);
+            mostrarLoader(false)
+            console.log(response)
+            // $('#progressbar').modal("hide");
+            if ( response.result != 2 ){
+                showReplyMessage(response.result, response.message, "Detalle de exportacion", null);
+            }else if ( response.result == 2 ){
+                // showReplyMessage(response.result, response.message, "Detalle de exportacion", null);
+                // window.location.href = getSiteURL() + 'downloadExcel.php?n='+response.name;
+                window.location.href = getSiteURL() + 'downloadExcel.php?n='+response.name + '&a=' + response.finalName ;
+            }
+        })
+        .catch((error)=>{
+            mostrarLoader(false)
+            console.log("catch :"+error);
+        })
 }
