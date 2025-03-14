@@ -110,7 +110,7 @@ $(document).ready(function() {
         console.log('click overCheck')
         let checkedBoxes = $('#providersTable tbody input[type="checkbox"]:checked');
         // If this is the only one checked, prevent unchecking
-        if (checkedBoxes.length == 0 && $(this).prop('checked') == false) {
+        if (checkedBoxes.length == 1 && $(this).prop('checked') == false) {
             $(this).prop('checked', true)
             event.preventDefault();
             return false;
