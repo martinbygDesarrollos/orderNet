@@ -2,7 +2,7 @@
 {% block head %}
 {% endblock %}
 {% block content %}
-    <div class="searchBar w-100 template-bg"> <input type="text" class="form-control" id="inputSearchArticle" placeholder="Buscar..."> </div>
+    <div class="searchBar w-100 template-bg"> <input type="text" class="form-control" id="inputSearchArticle" onkeyup="verifySearchArticles()" placeholder="Buscar..."> </div>
     <div class="tableContainer d-flex">
         <table class="table table-hover table-striped" id="tableArticles">
             <thead class="template-bg">

@@ -99,12 +99,18 @@ $(document).ready(function() {
         }
     })
 
-    $('#tableArticles tbody tr td:first-child').on('click', function() {
+    // $('#tableArticles tbody tr td:first-child').on('click', function() {
+    //     var id = $(this).parent('tr').attr('id');
+    //     console.log('ID del Articulo seleccionado:', id);
+    //     showModalEditArticle(id)
+
+    // });
+    $('#tableArticles').on('click', 'tbody tr td:first-child', function() {
         var id = $(this).parent('tr').attr('id');
         console.log('ID del Articulo seleccionado:', id);
-        showModalEditArticle(id)
-
+        showModalEditArticle(id);
     });
+
 
     $(document).on('click', 'input[type="checkbox"]', function(event) {
         console.log('click overCheck');
@@ -237,34 +243,71 @@ function editArticle(id, detalle, codigo, marca, proveedores){
     console.log(proveedores)
 }
 
+function verifySearchArticles(){
+    let text = $('#inputSearchArticle').val().trim() || "";
+    text = text.length > 2 ? text : ""
+    if(text.length > 2){
+        $('#tableArticles tbody').empty()
+        getArticles(0)
+    } else {
+        $('#tableArticles tbody').empty()
+        getArticles(0)
+    }
+    // } else {
+    //     $('#tableArticles tbody').empty()
+    //     getArticles(0)
+    // }
+}
+
 
 function getArticles(lastId){
     // mostrarLoader(true)
-    sendAsyncPost("getAllArticles", { lastId: lastId })
-        .then((response)=>{
-            // mostrarLoader(false)
-            if (response.result == 2){
-                console.log(response)
-                response.articulos.forEach(element => {
-                    $('#tableArticles tbody').append(`
-                        <tr id="${element.id}">
-                            <td>${element.detalle}</td>
-                            <td>${element.codigo || ""}</td>
-                            <td>${element.marca || ""}</td>
-                            <td>
-                                ${element.proveedores.map(proveedor => `<p class="mb-0">${proveedor.nombre}</p>`).join('')}
-                            </td>
-                        </tr>
-                    `);
-                });
-            } else {
-                console.log("error")
-            }
-        })
-        .catch((error)=>{
-            // mostrarLoader(false)
-            console.log("catch :"+error);
-        })
+    let textToSearch = $('#inputSearchArticle').val().trim() || "";
+    textToSearch = textToSearch.length > 2 ? textToSearch : ""
+    console.log(`'${textToSearch}'`);
+    let response = sendPost("getAllArticles", { lastId: lastId, textToSearch: textToSearch });
+    if(response.result == 2){
+        console.log(response)
+        response.articulos.forEach(element => {
+            $('#tableArticles tbody').append(`
+                <tr id="${element.id}">
+                    <td>${element.detalle}</td>
+                    <td>${element.codigo || ""}</td>
+                    <td>${element.marca || ""}</td>
+                    <td>
+                        ${element.proveedores.map(proveedor => `<p class="mb-0">${proveedor.nombre}</p>`).join('')}
+                    </td>
+                </tr>
+            `);
+        });
+    }else if(response.result == 0){
+        console.log("error")
+	}
+    // sendAsyncPost("getAllArticles", { lastId: lastId })
+    //     .then((response)=>{
+    //         // mostrarLoader(false)
+    //         if (response.result == 2){
+    //             console.log(response)
+    //             response.articulos.forEach(element => {
+    //                 $('#tableArticles tbody').append(`
+    //                     <tr id="${element.id}">
+    //                         <td>${element.detalle}</td>
+    //                         <td>${element.codigo || ""}</td>
+    //                         <td>${element.marca || ""}</td>
+    //                         <td>
+    //                             ${element.proveedores.map(proveedor => `<p class="mb-0">${proveedor.nombre}</p>`).join('')}
+    //                         </td>
+    //                     </tr>
+    //                 `);
+    //             });
+    //         } else {
+    //             console.log("error")
+    //         }
+    //     })
+    //     .catch((error)=>{
+    //         // mostrarLoader(false)
+    //         console.log("catch :"+error);
+    //     })
 }
 
 function newArticle(detalle, codigo, marca, proveedores){

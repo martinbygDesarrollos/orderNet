@@ -192,7 +192,7 @@ return function (App $app){
 		if($responseCurrentSession->result == 2 && $responseCurrentSession->currentSession->permisos == "administrador"){
 			$args['systemSession'] = $responseCurrentSession->currentSession;
 			$args['versionerp'] = '?'.FECHA_ULTIMO_PUSH;
-			$args['articulos'] = $userController->getAllArticles($responseCurrentSession->currentSession->empresa, 20, 0)->articulos ?? array();
+			$args['articulos'] = $userController->getAllArticles($responseCurrentSession->currentSession->empresa, 20, 0, "")->articulos ?? array();
 			return $this->view->render($response, "articles.twig", $args);
 		} else {
 			return $response->withRedirect($request->getUri()->getBaseUrl());
@@ -340,7 +340,8 @@ return function (App $app){
 		if($responseCurrentSession->result == 2){
 			$data = $request->getParams();
 			$lastId = $data['lastId'];
-			return json_encode($userController->getAllArticles($responseCurrentSession->currentSession->empresa, 20, $lastId));
+			$textToSearch = $data['textToSearch'];
+			return json_encode($userController->getAllArticles($responseCurrentSession->currentSession->empresa, 20, $lastId, $textToSearch));
 		}else return json_encode($responseCurrentSession);
 	});
 

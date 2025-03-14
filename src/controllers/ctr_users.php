@@ -126,10 +126,10 @@ class ctr_users{
 		return $response;
 	}
 
-	public function getAllArticles($empresa, $limit, $from){
+	public function getAllArticles($empresa, $limit, $from, $textToSearch){
 		$userClass = new users();
 		$response = new \stdClass();
-		$responseGetArticles = $userClass->getAllArticles($empresa, $limit, $from);
+		$responseGetArticles = $userClass->getAllArticles($empresa, $limit, $from, $textToSearch);
 		if($responseGetArticles->result == 2){
 			$response->result = 2;
 			$response->articulos = $responseGetArticles->articulos;

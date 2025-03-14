@@ -679,16 +679,21 @@ class users{
 		} else return $responseQuery;
 		return $response;
 	}
-	public function getAllArticles($empresa, $limit, $from){ // Devuelve todas los articulos con sus respectivos proveedores (Puede tener LIMIT y DESDE qué ID)
+	public function getAllArticles($empresa, $limit, $from, $textToSearch){ // Devuelve todas los articulos con sus respectivos proveedores (Puede tener LIMIT y DESDE qué ID)
 		$dbClass = new DataBase();
 		$response = new \stdClass();
+
+		$sqlToSearch = "";
+		if(strlen($textToSearch) > 0){
+			$sqlToSearch .= " AND a.detalle LIKE '%$textToSearch%'";
+		}
 
 		$limit = $limit != 0 ? "LIMIT $limit" : "";
 		$query = "SELECT a.*, p.id as proveedor_id, p.nombre as proveedor_nombre, pa.codigo as proveedor_codigo
 			FROM articulo a
 			LEFT JOIN proveedor_articulo pa ON a.id = pa.articulo
 			LEFT JOIN proveedor p ON pa.proveedor = p.id
-			WHERE a.empresa = ? AND a.id > $from $limit";
+			WHERE a.empresa = ? AND a.id > $from $sqlToSearch $limit";
 		$responseQuery = $dbClass->sendQuery($query, array('i', $empresa), "LIST");
 		if($responseQuery->result == 2){
 			$articulos = array();
