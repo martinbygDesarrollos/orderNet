@@ -106,6 +106,10 @@ body {
     text-align: center !important;
 }
 
+#tableUsers tbody tr:hover{
+    cursor: pointer;
+}
+
 #tableItemsUser tr th{
     text-align: center !important;
 }
